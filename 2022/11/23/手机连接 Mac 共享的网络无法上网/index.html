@@ -1,44 +1,120 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>手机连接 Mac 共享的网络无法上网 | 葡萄成熟时</title><meta name="keywords" content="Mac,WiFi,手机,共享"><meta name="author" content="aLIEz"><meta name="copyright" content="aLIEz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题如果你的手机连接的是 Mac（苹果电脑） ，并且按照网上的共享的设定之后还是无法上网，那么，问题就出在 DNS 服务器的设定 打开手机连接的 WiFi 的配置，把 DNS 改成你电脑有线连接的网络的 DNS 即可！！！！">
-<meta property="og:type" content="article">
-<meta property="og:title" content="手机连接 Mac 共享的网络无法上网">
-<meta property="og:url" content="https://9291314.xyz/2022/11/23/%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5%20Mac%20%E5%85%B1%E4%BA%AB%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91/index.html">
-<meta property="og:site_name" content="葡萄成熟时">
-<meta property="og:description" content="手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题如果你的手机连接的是 Mac（苹果电脑） ，并且按照网上的共享的设定之后还是无法上网，那么，问题就出在 DNS 服务器的设定 打开手机连接的 WiFi 的配置，把 DNS 改成你电脑有线连接的网络的 DNS 即可！！！！">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
-<meta property="article:published_time" content="2022-11-23T09:57:32.000Z">
-<meta property="article:modified_time" content="2022-11-23T10:02:25.839Z">
-<meta property="article:author" content="aLIEz">
-<meta property="article:tag" content="Mac">
-<meta property="article:tag" content="WiFi">
-<meta property="article:tag" content="手机">
-<meta property="article:tag" content="共享">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://9291314.xyz/2022/11/23/%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5%20Mac%20%E5%85%B1%E4%BA%AB%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>手机连接 Mac 共享的网络无法上网 | 葡萄成熟时</title><meta name="author" content="aLIEz"><meta name="copyright" content="aLIEz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题如果你的手机连接的是 Mac（苹果电脑） ，并且按照网上的共享的设定之后还是无法上网，那么，问题就出在 DNS 服务器的设定 打开手机连接的 WiFi 的配置，把 DNS 改成你电脑有线连接的网络的 DNS 即可！！！！ "><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://9291314.xyz/2022/11/23/%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5%20Mac%20%E5%85%B1%E4%BA%AB%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "https://hm.baidu.com/hm.js?5f9160924ada8e88793ec657871ba9e7";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script><script>const GLOBAL_CONFIG = { 
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
   localSearch: undefined,
   translate: undefined,
-  noticeOutdate: {"limitDay":180,"position":"top","messagePrev":"距离文章更新时间","messageNext":"了，文字内容可能失效。"},
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
   copy: {
     success: '复制成功',
-    error: '复制错误',
+    error: '复制失败',
     noSupport: '浏览器不支持'
   },
   relativeDate: {
     homepage: false,
     post: false
   },
-  runtime: '天',
-  date_suffix: {
+  runtime: '',
+  dateSuffix: {
     just: '刚刚',
     min: '分钟前',
     hour: '小时前',
@@ -46,169 +122,102 @@
     month: '个月前'
   },
   copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
   },
   isPhotoFigcaption: true,
   islazyload: false,
-  isAnchor: false
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
   title: '手机连接 Mac 共享的网络无法上网',
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-11-23 18:02:25'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
-
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
-
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
-
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">56</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">葡萄成熟时</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">手机连接 Mac 共享的网络无法上网</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-23T09:57:32.000Z" title="发表于 2022-11-23 17:57:32">2022-11-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-23T10:02:25.839Z" title="更新于 2022-11-23 18:02:25">2022-11-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Mac/">Mac</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">101</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="手机连接 Mac 共享的网络无法上网"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="手机连接-Mac-（苹果电脑）共享的-WiFi-后，出现无法上网的问题"><a href="#手机连接-Mac-（苹果电脑）共享的-WiFi-后，出现无法上网的问题" class="headerlink" title="手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题"></a>手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题</h1><p>如果你的手机连接的是 Mac（苹果电脑） ，并且按照网上的共享的设定之后还是无法上网，那么，问题就出在 DNS 服务器的设定</p>
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">56</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">葡萄成熟时</span></a><a class="nav-page-title" href="/"><span class="site-name">手机连接 Mac 共享的网络无法上网</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">手机连接 Mac 共享的网络无法上网</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-11-23T09:57:32.000Z" title="发表于 2022-11-23 17:57:32">2022-11-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-11-23T10:02:25.839Z" title="更新于 2022-11-23 18:02:25">2022-11-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Mac/">Mac</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">101</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:180,&quot;messagePrev&quot;:&quot;距离文章更新时间&quot;,&quot;messageNext&quot;:&quot;了，文字内容可能失效。&quot;,&quot;postUpdate&quot;:&quot;2022-11-23 18:02:25&quot;}" hidden></div><h1 id="手机连接-Mac-（苹果电脑）共享的-WiFi-后，出现无法上网的问题"><a href="#手机连接-Mac-（苹果电脑）共享的-WiFi-后，出现无法上网的问题" class="headerlink" title="手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题"></a>手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题</h1><p>如果你的手机连接的是 Mac（苹果电脑） ，并且按照网上的共享的设定之后还是无法上网，那么，问题就出在 DNS 服务器的设定</p>
 <p>打开手机连接的 WiFi 的配置，把 DNS 改成你电脑有线连接的网络的 DNS 即可！！！！</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="aLIEz">aLIEz</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://9291314.xyz/2022/11/23/%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5%20Mac%20%E5%85%B1%E4%BA%AB%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91/">https://9291314.xyz/2022/11/23/%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5%20Mac%20%E5%85%B1%E4%BA%AB%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://9291314.xyz" target="_blank">葡萄成熟时</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Mac/">Mac</a><a class="post-meta__tags" href="/tags/WiFi/">WiFi</a><a class="post-meta__tags" href="/tags/%E6%89%8B%E6%9C%BA/">手机</a><a class="post-meta__tags" href="/tags/%E5%85%B1%E4%BA%AB/">共享</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/12/11/SQLMap%E4%BD%BF%E7%94%A8%E6%94%BB%E7%95%A5%E5%8F%8A%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">SQLMap使用攻略及技巧分享</div></div></a></div><div class="next-post pull-right"><a href="/2022/11/22/VPS%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">VPS 常用命令</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/01/02/M1%20Mac%E4%B8%8BJava%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E4%B8%8E%E5%8D%B8%E8%BD%BD/" title="M1 Mac下Java版本切换与卸载"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-02</div><div class="title">M1 Mac下Java版本切换与卸载</div></div></a></div><div><a href="/2022/07/31/M1%20%E5%AE%89%E8%A3%85%20homebrew/" title="Mac 安装 homebrew"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-31</div><div class="title">Mac 安装 homebrew</div></div></a></div><div><a href="/2022/07/31/M1%20%E5%AE%89%E8%A3%85%20Oh%20My%20Zsh/" title="M1 安装 Oh My Zsh"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-31</div><div class="title">M1 安装 Oh My Zsh</div></div></a></div><div><a href="/2022/09/05/Mac%20%E5%AE%89%E8%A3%85%20Burp%20Suite%20Professionall%20%E7%A0%B4%E8%A7%A3%E8%A1%A5%E4%B8%81/" title="Mac 安装 Burp Suite Professionall 破解补丁"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-05</div><div class="title">Mac 安装 Burp Suite Professionall 破解补丁</div></div></a></div><div><a href="/2023/03/19/Mac-PS%E5%85%B3%E9%97%AD%E6%9C%80%E8%BF%91%E4%BD%BF%E7%94%A8%E9%A1%B9/" title="Mac PS关闭最近使用项"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-19</div><div class="title">Mac PS关闭最近使用项</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">aLIEz</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">56</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/aLIEz-xue"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/aLIEz-xue" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/aliezxcy@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5-Mac-%EF%BC%88%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%EF%BC%89%E5%85%B1%E4%BA%AB%E7%9A%84-WiFi-%E5%90%8E%EF%BC%8C%E5%87%BA%E7%8E%B0%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/07/16/PVE%E5%AE%89%E8%A3%85Openwrt/" title="PVE安装Openwrt"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PVE安装Openwrt"/></a><div class="content"><a class="title" href="/2023/07/16/PVE%E5%AE%89%E8%A3%85Openwrt/" title="PVE安装Openwrt">PVE安装Openwrt</a><time datetime="2023-07-16T02:36:15.000Z" title="发表于 2023-07-16 10:36:15">2023-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/05/Debian%2011%20%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" title="Debian 11 更换镜像源"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Debian 11 更换镜像源"/></a><div class="content"><a class="title" href="/2023/04/05/Debian%2011%20%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" title="Debian 11 更换镜像源">Debian 11 更换镜像源</a><time datetime="2023-04-05T09:09:07.000Z" title="发表于 2023-04-05 17:09:07">2023-04-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/05/Debian%2012%20%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" title="Debian 12 更换镜像源"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Debian 12 更换镜像源"/></a><div class="content"><a class="title" href="/2023/04/05/Debian%2012%20%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" title="Debian 12 更换镜像源">Debian 12 更换镜像源</a><time datetime="2023-04-05T09:09:07.000Z" title="发表于 2023-04-05 17:09:07">2023-04-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/19/Mac-PS%E5%85%B3%E9%97%AD%E6%9C%80%E8%BF%91%E4%BD%BF%E7%94%A8%E9%A1%B9/" title="Mac PS关闭最近使用项"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mac PS关闭最近使用项"/></a><div class="content"><a class="title" href="/2023/03/19/Mac-PS%E5%85%B3%E9%97%AD%E6%9C%80%E8%BF%91%E4%BD%BF%E7%94%A8%E9%A1%B9/" title="Mac PS关闭最近使用项">Mac PS关闭最近使用项</a><time datetime="2023-03-19T13:45:50.000Z" title="发表于 2023-03-19 21:45:50">2023-03-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/14/%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%AA%E4%BA%BA%E5%8F%91%E5%B1%95%E8%AE%A1%E5%88%92%EF%BC%88IDP%EF%BC%89%EF%BC%9F/" title="什么是个人发展计划（IDP）？"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="什么是个人发展计划（IDP）？"/></a><div class="content"><a class="title" href="/2023/02/14/%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%AA%E4%BA%BA%E5%8F%91%E5%B1%95%E8%AE%A1%E5%88%92%EF%BC%88IDP%EF%BC%89%EF%BC%9F/" title="什么是个人发展计划（IDP）？">什么是个人发展计划（IDP）？</a><time datetime="2023-02-14T07:56:49.000Z" title="发表于 2023-02-14 15:56:49">2023-02-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By aLIEz</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="aLIEz">aLIEz</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://9291314.xyz/2022/11/23/%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5%20Mac%20%E5%85%B1%E4%BA%AB%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91/">https://9291314.xyz/2022/11/23/%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5%20Mac%20%E5%85%B1%E4%BA%AB%E7%9A%84%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://9291314.xyz" target="_blank">葡萄成熟时</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Mac/">Mac</a><a class="post-meta__tags" href="/tags/WiFi/">WiFi</a><a class="post-meta__tags" href="/tags/%E6%89%8B%E6%9C%BA/">手机</a><a class="post-meta__tags" href="/tags/%E5%85%B1%E4%BA%AB/">共享</a></div><div class="post-share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2022/12/11/SQLMap%E4%BD%BF%E7%94%A8%E6%94%BB%E7%95%A5%E5%8F%8A%E6%8A%80%E5%B7%A7%E5%88%86%E4%BA%AB/" title="SQLMap使用攻略及技巧分享"><div class="cover" style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">SQLMap使用攻略及技巧分享</div></div><div class="info-2"><div class="info-item-1">SQLMap使用攻略及技巧分享sqlmap是一个开源的渗透测试工具，可以用来进行自动化检测，利用SQL注入漏洞，获取数据库服务器的权限。它具有功能强大的检测引擎,针对各种不同类型数据库的渗透测试的功能选项，包括获取数据库中存储的数据，访问操作系统文件甚至可以通过外带数据连接的方式执行操作系统命令。 官方网站：http://sqlmap.org/ 下载地址：https://github.com/sqlmapproject/sqlmap/zipball/master 演示视频：https://asciinema.org/a/46601 教程：http://www.youtube.com/user/inquisb/videos 1.1 sqlmap简介sqlmap支持MySQL, Oracle,PostgreSQL, Microsoft SQL Server, Microsoft Access, IBM DB2, SQLite, Firebird,Sybase和SAP MaxDB等数据库的各种安全漏洞检测。 sqlmap支持五种不同的注入模式：  l ...</div></div></div></a><a class="pagination-related  no-desc" href="/2022/11/22/VPS%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="VPS 常用命令"><div class="cover" style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">VPS 常用命令</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2023/01/02/M1%20Mac%E4%B8%8BJava%E7%89%88%E6%9C%AC%E5%88%87%E6%8D%A2%E4%B8%8E%E5%8D%B8%E8%BD%BD/" title="M1 Mac下Java版本切换与卸载"><div class="cover" style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-01-02</div><div class="info-item-2">M1 Mac下Java版本切换与卸载</div></div><div class="info-2"><div class="info-item-1">显示已安装的 Java 版本ls /Library/Java/JavaVirtualMachines/ 卸载插件sudo rm -fr /Library/Internet/Plug-Ins/JavaAppletPlugin.pluginsudo rm -fr /Library/PreferencesPanes/JavaControlPanel.prefpane  卸载其中一个版本sudo rm -rf /Library/Java/JavaVirtualMachines/（jdk版本）  重启reboot 查看Java版本Java全版本通用（推荐）java -version Java高版本（Java11以上）java --version  Mac下通过 bash_profile 文件或 zshrc 来对环境信息进行配置。执行以下命令打开配置文件： open ~/.bash_profile open ~/.zshrc  如果原本没有.bash_profile文件，在运行vim...</div></div></div></a><a class="pagination-related" href="/2022/07/31/M1%20%E5%AE%89%E8%A3%85%20homebrew/" title="Mac 安装 homebrew"><div class="cover" style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-31</div><div class="info-item-2">Mac 安装 homebrew</div></div><div class="info-2"><div class="info-item-1">1.安装脚本/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot; 2.如果遇到环境变量无效问题，建议回过头来查看终端类型，再做正确的设置。从macOS Catalina(10.15.x) 版开始，Mac使用zsh作为默认Shell，使用.zprofile，所以对应命令： echo &#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt; ~/.zprofileeval &quot;$(/opt/homebrew/bin/brew shellenv)&quot; 如果是macOS Mojave 及更低版本，并且没有自己配置过zsh，使用.bash_profile： echo &#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt;...</div></div></div></a><a class="pagination-related" href="/2022/07/31/M1%20%E5%AE%89%E8%A3%85%20Oh%20My%20Zsh/" title="M1 安装 Oh My Zsh"><div class="cover" style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-31</div><div class="info-item-2">M1 安装 Oh My Zsh</div></div><div class="info-2"><div class="info-item-1">安装 Oh My ZshOh My Zsh是一个开源的、社区驱动的框架，用于管理您的Zsh配置.  官网提供的安装方式：  sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;  powerlevel10k Homebrew Fonts： &gt; 在macOS上，并希望使用Homebrew的最佳选择。所有字体都可以通过macOS（OS X）上的Homebrew Cask字体获得 brew tap homebrew/cask-fontsbrew install --cask font-hack-nerd-font  克隆仓库：  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $&#123;ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom&#125;/themes/powerlevel10k  中国大陆用户可以使用 gitee.com...</div></div></div></a><a class="pagination-related" href="/2022/09/05/Mac%20%E5%AE%89%E8%A3%85%20Burp%20Suite%20Professionall%20%E7%A0%B4%E8%A7%A3%E8%A1%A5%E4%B8%81/" title="Mac 安装 Burp Suite Professionall 破解补丁"><div class="cover" style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-05</div><div class="info-item-2">Mac 安装 Burp Suite Professionall 破解补丁</div></div><div class="info-2"><div class="info-item-1">Mac-安装-Burp-Suite-Professionall-破解补丁安装Mac版Burp 补丁下载地址：https://github.com/h3110w0r1d-y/BurpLoaderKeygen（https://t.me/BurpLoaderKeygen）或https://github.com/x-Ai/BurpSuite/tree/main（本次使用第一个链接进行讲解）  将注册机放置到/Applications/Burp Suite Professional.app/Contents/Resources/app目录下  执行以下命令启动注册机   cd &quot;/Applications/Burp Suite Professional.app/Contents/Resources/app&quot;&quot;/Applications/Burp Suite Professional.app/Contents/Resources/jre.bundle/Contents/Home/bin/java&quot; -jar...</div></div></div></a><a class="pagination-related" href="/2023/03/19/Mac-PS%E5%85%B3%E9%97%AD%E6%9C%80%E8%BF%91%E4%BD%BF%E7%94%A8%E9%A1%B9/" title="Mac PS关闭最近使用项"><div class="cover" style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-03-19</div><div class="info-item-2">Mac PS关闭最近使用项</div></div><div class="info-2"><div class="info-item-1">打开PS设置中——历史记录与文件处理 历史记录 文件处理 </div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">aLIEz</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">56</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">12</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/aLIEz-xue"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/aLIEz-xue" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/aliezxcy@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E8%BF%9E%E6%8E%A5-Mac-%EF%BC%88%E8%8B%B9%E6%9E%9C%E7%94%B5%E8%84%91%EF%BC%89%E5%85%B1%E4%BA%AB%E7%9A%84-WiFi-%E5%90%8E%EF%BC%8C%E5%87%BA%E7%8E%B0%E6%97%A0%E6%B3%95%E4%B8%8A%E7%BD%91%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">手机连接 Mac （苹果电脑）共享的 WiFi 后，出现无法上网的问题</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/07/16/PVE%E5%AE%89%E8%A3%85Openwrt/" title="PVE安装Openwrt"><div style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div></a><div class="content"><a class="title" href="/2023/07/16/PVE%E5%AE%89%E8%A3%85Openwrt/" title="PVE安装Openwrt">PVE安装Openwrt</a><time datetime="2023-07-16T02:36:15.000Z" title="发表于 2023-07-16 10:36:15">2023-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/05/Debian%2011%20%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" title="Debian 11 更换镜像源"><div style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div></a><div class="content"><a class="title" href="/2023/04/05/Debian%2011%20%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" title="Debian 11 更换镜像源">Debian 11 更换镜像源</a><time datetime="2023-04-05T09:09:07.000Z" title="发表于 2023-04-05 17:09:07">2023-04-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/05/Debian%2012%20%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" title="Debian 12 更换镜像源"><div style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div></a><div class="content"><a class="title" href="/2023/04/05/Debian%2012%20%E6%9B%B4%E6%8D%A2%E9%95%9C%E5%83%8F%E6%BA%90/" title="Debian 12 更换镜像源">Debian 12 更换镜像源</a><time datetime="2023-04-05T09:09:07.000Z" title="发表于 2023-04-05 17:09:07">2023-04-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/19/Mac-PS%E5%85%B3%E9%97%AD%E6%9C%80%E8%BF%91%E4%BD%BF%E7%94%A8%E9%A1%B9/" title="Mac PS关闭最近使用项"><div style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div></a><div class="content"><a class="title" href="/2023/03/19/Mac-PS%E5%85%B3%E9%97%AD%E6%9C%80%E8%BF%91%E4%BD%BF%E7%94%A8%E9%A1%B9/" title="Mac PS关闭最近使用项">Mac PS关闭最近使用项</a><time datetime="2023-03-19T13:45:50.000Z" title="发表于 2023-03-19 21:45:50">2023-03-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/14/%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%AA%E4%BA%BA%E5%8F%91%E5%B1%95%E8%AE%A1%E5%88%92%EF%BC%88IDP%EF%BC%89%EF%BC%9F/" title="什么是个人发展计划（IDP）？"><div style="background: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div></a><div class="content"><a class="title" href="/2023/02/14/%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%AA%E4%BA%BA%E5%8F%91%E5%B1%95%E8%AE%A1%E5%88%92%EF%BC%88IDP%EF%BC%89%EF%BC%9F/" title="什么是个人发展计划（IDP）？">什么是个人发展计划（IDP）？</a><time datetime="2023-02-14T07:56:49.000Z" title="发表于 2023-02-14 15:56:49">2023-02-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By aLIEz</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>(() => {
+  const panguFn = () => {
+    if (typeof pangu === 'object') pangu.autoSpacingPage()
+    else {
+      btf.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+        .then(() => {
+          pangu.autoSpacingPage()
+        })
+    }
   }
-}
 
-function panguInit () {
-  if (true){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
+  const panguInit = () => {
+    if (true){
+      GLOBAL_CONFIG_SITE.isPost && panguFn()
+    } else {
+      panguFn()
+    }
   }
-}
 
-document.addEventListener('DOMContentLoaded', panguInit)</script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
+  btf.addGlobalFn('pjaxComplete', panguInit, 'pangu')
+  document.addEventListener('DOMContentLoaded', panguInit)
+})()</script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
 
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
-  function initValine () {
-    const valine = new Valine(Object.assign({
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
       el: '#vcomment',
       appId: 'siKojGs3AKpdAtHCoK5NSGGS-gzGzoHsz',
       appKey: 'DljP1p0gumkTbXVfcSNGhzrf',
       avatar: 'monsterid',
       serverURLs: '',
       emojiMaps: "",
-      path: window.location.pathname,
-      visitor: false
-    }, null))
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
   }
 
-  if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
-}
-
-if ('Valine' === 'Valine' || !true) {
-  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
-  else setTimeout(loadValine, 0)
-} else {
-  function loadOtherComment () {
-    loadValine()
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
   }
-}</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !true) {
+    if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
